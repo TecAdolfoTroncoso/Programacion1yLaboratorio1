@@ -11,7 +11,7 @@
 int main()
 {
     int i, numero[MAX],mayor;
-    mayor = numero[i];
+    mayor = numero[0];
     for (i = 1; i <= 10; i++)
     {
         printf("Ingrese los valores: %d('Numero de ciclo'):", i );
