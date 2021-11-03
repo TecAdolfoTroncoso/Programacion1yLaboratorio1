@@ -10,16 +10,20 @@
 #define MAX 10
 int main()
 {
-    int i, numero[MAX],mayor;
+    int i, numero[MAX], mayor;
     mayor = numero[i];
-    for (i = 1; i <= 10; i++)
+    for (i = 1; i <= MAX; i++)
     {
-        printf("Ingrese los valores: %d('Numero de ciclo'):", i );
+        printf("Ingrese los valores: %d('Numero de ciclo'):", i);
         scanf("%d", &numero[i]);
-        if (numero > mayor)
+    }
+
+    for (i = 1; i <= MAX; i++)
+    {
+        if (numero[i] > mayor)
         {
-            mayor = numero;
+            mayor = numero[i];
         }
     }
     printf("El mayor es : %d \n", mayor);
- }
+}
