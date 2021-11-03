@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(){
-    int v[5];
+    int v[5];//
 
     v[0]=12;
     v[1]=23;
