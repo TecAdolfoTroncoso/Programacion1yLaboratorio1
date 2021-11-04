@@ -1,8 +1,10 @@
 /*
-Dado un triángulo rectángulo cuyos lados son: base=3, altura=4, hipot=5. Calcular
-matemáticamente los ángulos con una o mas funciones.
-Autor: Gustavo Barrajón
-Modificó:
+ Ejercicios de la guia 2 de ejercicios de programacion. 
+  Funciones
+  Descripción:Dado un triángulo rectángulo cuyos lados son: base=3, altura=4, hipot=5. Calcular
+  matemáticamente los ángulos con una o mas funciones
+  Programa: Eje08_guia2
+  Alumno: Adolfo Jesús Troncoso.
 */
 
 #include <stdio.h>
@@ -17,7 +19,7 @@ float cargaraltura();
 
 void main(void)
 {
-    
+
     system("cls");
     puts("\n******************************************");
     float a, b, c;
