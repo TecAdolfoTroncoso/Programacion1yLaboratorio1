@@ -3,7 +3,7 @@
   Funciones
   Descripción:Dado un triángulo rectángulo cuyos lados son: base=3, altura=4, hipot=5. Calcular
   matemáticamente los ángulos con una o mas funciones
-  Programa: Eje08_guia2
+  Programa: Eje03_guia2
   Alumno: Adolfo Jesús Troncoso.
 */
 
