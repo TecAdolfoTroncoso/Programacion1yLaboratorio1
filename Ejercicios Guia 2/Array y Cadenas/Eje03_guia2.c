@@ -5,32 +5,51 @@
   Programa: Eje03_guia2
   Alumno: Adolfo Jesús Troncoso.
 */
-
+#define MAX 100
 void datosVector(int v[]);
 
 int calculo(int r[]);
-
-void main(){
-  cerrarprograma();  
-}
-
-int calculo(int r[]){
-
-}
-
-
-
-void cerrarprograma()
+void salirprograma(char d);
+void main()
 {
-    char d;
-    printf("Esta seguro que quiere salir del programa? Escriba 's' si esta de acuerdo.\n");
-    scanf("%c", &d);
-    for (;;)
+    int cargavector[MAX];
+    datosVector(cargavector);
+    printf("El producto de los numeros ingresados es %d \n", calculo(cargavector));
+}
+
+void datosVector(int v[])
+{
+    int i;
+    for (i = 0; i <= v[MAX]; i++)
     {
-        if (d == 's')
+        printf("ingrese un numero\n");
+        scanf("%d", &v[i]);
+        if (v[i] < 0)
         {
-            printf("Esta saliendo del programa.");
             break;
         }
     }
 }
+
+int calculo(int r[])
+{
+    int prod = 1;
+    char c;
+    for (int i = 0; i <= MAX; i++)
+    {
+        if (r[i] > 0)
+        {
+            prod = prod * r[i];
+        }
+        else
+        {
+            printf("Usted ingreso un numero negativo\n");
+            break;
+        }
+        
+        
+    }
+    return prod;
+}
+
+
