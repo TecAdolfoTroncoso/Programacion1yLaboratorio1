@@ -11,7 +11,7 @@ int numero,i,prom,aux,suma;
 
 int main() {
 
-    for (i = 0; i < 10; i++)
+    for (i = 1; i <= 10; i++)
     {
       puts("******************************************");
       printf("Ingrese el numero %d('Numero de ciclo'): ",i);
