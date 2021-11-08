@@ -20,7 +20,7 @@ int calculo(int r[]){
 
 
 
-void cerrarprograma(int a)
+void cerrarprograma()
 {
     char d;
     printf("Esta seguro que quiere salir del programa? Escriba 's' si esta de acuerdo.\n");
