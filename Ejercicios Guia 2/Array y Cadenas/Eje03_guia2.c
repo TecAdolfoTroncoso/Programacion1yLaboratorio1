@@ -5,51 +5,58 @@
   Programa: Eje03_guia2
   Alumno: Adolfo Jesús Troncoso.
 */
-#define MAX 100
-void datosVector(int v[]);
 
-int calculo(int r[]);
-void salirprograma(char d);
-void main()
+#include <stdio.h>
+#define MAX 60
+
+int cargadatos(int carga[]);
+int producto(int carga[]);
+int main()
 {
-    int cargavector[MAX];
-    datosVector(cargavector);
-    printf("El producto de los numeros ingresados es %d \n", calculo(cargavector));
+    int numero[MAX];
+    cargadatos(numero);
+    printf("El producto de los numeros ingresados es %d\n", producto(numero));
 }
 
-void datosVector(int v[])
+int cargadatos(int carga[])
 {
     int i;
-    for (i = 0; i <= v[MAX]; i++)
+    do
     {
-        printf("ingrese un numero\n");
-        scanf("%d", &v[i]);
-        if (v[i] < 0)
+        i++;
+        printf("Ingrese elementos para cargar el array: ");
+        scanf("%d", &carga[i]);
+    } while (carga[i] > 0);
+
+    for (int i = 0; i < MAX; i++)
+    {
+        if (carga[i] < 0)
         {
+            printf("Ingresaste un numero negativo, el programa se detendra.\n");
             break;
         }
     }
+
 }
 
-int calculo(int r[])
+int producto(int carga[])
 {
-    int prod = 1;
-    char c;
-    for (int i = 0; i <= MAX; i++)
+    int prod = 0;
+    for (int i = 0; i < MAX; i++)
     {
-        if (r[i] > 0)
-        {
-            prod = prod * r[i];
+        if (carga[i] < 0)
+        { //Si es negativo rompo el for
+            break;
         }
         else
         {
-            printf("Usted ingreso un numero negativo\n");
-            break;
+            prod = 1;
         }
         
-        
+        if (prod != 0)
+        {
+            prod = prod * carga[i];
+        }
     }
     return prod;
 }
-
-
