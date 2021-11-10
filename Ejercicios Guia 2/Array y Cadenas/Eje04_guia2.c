@@ -3,7 +3,7 @@
   Funciones
   Descripción:Calcular las estadísticas de un conjunto de N Elementos de un Vector (media, varianza, 
   desvío y frecuencia de los elementos) e informarla por pantalla.
-  Programa: Eje03_guia2
+  Programa: Eje04_guia2
   Alumno: Adolfo Jesús Troncoso.
 */
 #include<stdio.h>

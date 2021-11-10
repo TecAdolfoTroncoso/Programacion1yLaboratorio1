@@ -40,6 +40,7 @@ int producto(int carga[])
     {
         if (carga[i] < 0)
         { //Si es negativo rompo el for
+        printf("Ha introducido un numero negativo el programa se terminara en unos instantes.\n");
             prod = 0;
             break;
         }
