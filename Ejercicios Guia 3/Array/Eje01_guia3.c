@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /*
   Ejercicios de la guia 3 de ejercicios de programacion. 
   Array
@@ -8,16 +9,48 @@
   Alumno: Adolfo Jesús Troncoso.
 */
 #define MAX 100
-int main (){
-
-int i,j,cantidad,auxiliar;
-int matriz_numeros[MAX];
-
-for (j=0;j<MAX;j++){
-    fflush(stdin); // Limpia la memoria 
-    printf("Ingrese el valor para la matriz");
-    scanf ("%d",&matriz_numeros[j]);
-}for(i=0;i<5-1;i++){
-    
+int vector[MAX];
+int main()
+{
+ llenar_vector();
+  //imprime_vector();
+  ordenarcaracteres();
 }
+void llenar_vector()
+{
+  for (int i = 0; i < MAX; i++)
+  {
+    vector[i] = rand() % 101;
+  }
+}
+
+void imprime_vector()
+{
+  for (int i = 0; i < MAX; i++)
+  {
+    printf("%d - %d \n", i + 1, vector[i]);
+  }
+}
+
+void ordenarcaracteres()
+{
+  printf("\n\nOrden Descendente\n");
+  int a, k, i;
+  for (int a = 1; a <= MAX; a++)
+  {
+    for (i = 1; i < MAX; i++)
+    {
+      if (vector[i] < vector[i + 1])
+      {
+        int min = vector[i];
+        vector[i] = vector[i + 1];
+        vector[i + 1] = min;
+      }
+    }
+  }
+  for ( i = 1; i < MAX; i++)
+  {
+    printf ("%d\t",vector[i]);
+  }
+  
 }
