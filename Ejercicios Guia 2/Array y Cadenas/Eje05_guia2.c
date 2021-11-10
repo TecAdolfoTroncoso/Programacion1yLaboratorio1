@@ -13,37 +13,49 @@
     Programa: Eje05_guia2
     Alumno: Adolfo Jesús Troncoso.
   */
-#include<stdio.h>
+#include <stdio.h>
 #include <ctype.h>
-
+#include <string.h>
+#define MAX 100
 void menu();
-void pedirdatos();
+char pedirdatos();
 void minusculaomayus();
 void buscar();
-void longitud();
+void longitud(int text1, int text2);
 void darlovuelta();
 
 char palabra1[100], palabra2[100];
 
- void main(){
-
- }
-
-void suma(int a, int b)
+int main()
 {
-    int suma = a + b;
-    printf("La suma entre %d + %d es igual a %d\n", a, b, suma);
+    menu();
+}
+
+void longitud(int text1, int text2)
+{
+    int longitud1 = strlen(text1);
+    int longitud2 = strlen(text2);
+    printf("La longitud de la primera cadena de caracteres es: %d y la longitud de la segunda es: %d", longitud1, longitud2);
+}
+
+char pedirdatos()
+{
+    printf("Ingresa la primer cadena de caracteres \n");
+    gets(palabra1);
+
+    printf("Ingresa la segunda cadena de caracteres \n");
+    gets(palabra2);
+    return palabra1, palabra2;
 }
 
 void pedirdatos()
 {
-    printf("Ingresa el primer numero: ");
-    scanf("%d", &palabra1);
-    printf("Ingresa el segundo numero: ");
-    scanf("%d", &palabra2);
+    printf("La primer cadena%c \n", palabra1);
+
+    printf("La segunda cadena de caracteres \n", palabra2);
 }
 
- void menu()
+void menu()
 {
     int opc;
     do
@@ -63,28 +75,28 @@ void pedirdatos()
         {
         case 1:
             pedirdatos();
-           
+
             system("pause");
             break;
         case 2:
-            pedirdatos();
-          
+           pedirdatos();
+
             system("pause");
             break;
         case 3:
             pedirdatos();
-    
+            longitud(palabra1[MAX], palabra2[MAX]);
             system("pause");
             break;
         case 4:
             pedirdatos();
-           
+
             system("pause");
             break;
         case 5:
             pedirdatos();
-             minusculaomayus();
-             system("pause");
+            minusculaomayus();
+            system("pause");
         default:
             printf("Salio del programa\n");
             system("pause");
@@ -93,6 +105,6 @@ void pedirdatos()
         system("cls");
     } while (opc <= 4);
 }
-void minusculaomayus(){
-
+void minusculaomayus()
+{
 }
