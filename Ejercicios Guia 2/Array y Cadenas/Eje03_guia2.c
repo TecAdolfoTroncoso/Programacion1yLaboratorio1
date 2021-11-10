@@ -7,7 +7,7 @@
 */
 
 #include <stdio.h>
-#define MAX 60
+#define MAX 100
 
 int cargadatos(int carga[]);
 int producto(int carga[]);
@@ -15,48 +15,44 @@ int main()
 {
     int numero[MAX];
     cargadatos(numero);
-    printf("El producto de los numeros ingresados es %d\n", producto(numero));
+    printf("El producto es: %d\n", producto(numero));
 }
 
 int cargadatos(int carga[])
 {
-    int i;
-    do
-    {
-        i++;
-        printf("Ingrese elementos para cargar el array: ");
-        scanf("%d", &carga[i]);
-    } while (carga[i] > 0);
+
 
     for (int i = 0; i < MAX; i++)
     {
+        printf("Ingrese elementos para cargar el array: ");
+        scanf("%d", &carga[i]);
         if (carga[i] < 0)
         {
-            printf("Ingresaste un numero negativo, el programa se detendra.\n");
             break;
         }
     }
-
 }
 
 int producto(int carga[])
 {
-    int prod = 0;
+    int prod=0,aux=1;
     for (int i = 0; i < MAX; i++)
     {
         if (carga[i] < 0)
         { //Si es negativo rompo el for
+            prod = 0;
             break;
         }
         else
         {
             prod = 1;
+            
         }
-        
+
         if (prod != 0)
         {
-            prod = prod * carga[i];
+          aux=aux*carga[i];  
         }
     }
-    return prod;
+    return aux;
 }
