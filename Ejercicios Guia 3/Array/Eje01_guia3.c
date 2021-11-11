@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /*
   Ejercicios de la guia 3 de ejercicios de programacion. 
@@ -12,6 +13,7 @@
 int vector[MAX];
 int main()
 {
+ system("color 70");// 7 fondo blanco 0 Letras negras
  llenar_vector();
   //imprime_vector();
   ordenarcaracteres();
@@ -35,14 +37,14 @@ void imprime_vector()
 void ordenarcaracteres()
 {
   printf("\n\nOrden Descendente\n");
-  int a, k, i;
-  for (int a = 1; a <= MAX; a++)
+  int a, i; // Contadores 
+  for (int a = 1; a <= MAX; a++) // recorre los 100 lugares del array
   {
-    for (i = 1; i < MAX; i++)
+    for (i = 1; i < MAX; i++) //recorre 99 lugares del array deja el lugar 100 del array como el ultimo como menor.
     {
-      if (vector[i] < vector[i + 1])
+      if (vector[i] < vector[i + 1])// Compara el primer valor del array contra el siguiente del mismo.
       {
-        int min = vector[i];
+        int min = vector[i]; // 
         vector[i] = vector[i + 1];
         vector[i + 1] = min;
       }
