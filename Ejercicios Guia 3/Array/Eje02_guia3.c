@@ -6,7 +6,7 @@
   Array
   Descripción:Que rellene un array con los 100 primeros números enteros y los muestre en pantalla 
   en orden ascendente. 
-  Programa: Eje01_guia2
+  Programa: Eje02_guia2
   Alumno: Adolfo Jesús Troncoso.
 */
 #define MAX 100
@@ -36,17 +36,17 @@ void imprime_vector()
 
 void ordenarcaracteres()
 {
-  printf("\n\nOrden Ascendente\n");
+  printf("\n\nOrden Descendente\n");
   int a, i; // Contadores 
   for (int a = 1; a <= MAX; a++) // recorre los 100 lugares del array
   {
     for (i = 1; i < MAX; i++) //recorre 99 lugares del array deja el lugar 100 del array como el ultimo como menor.
     {
-      if (vector[i] > vector[i + 1])// Compara el primer valor del array contra el siguiente del mismo.
+      if (vector[i] < vector[i + 1])// Compara el primer valor del array contra el siguiente del mismo.
       {
-        int mayor = vector[i]; // 
+        int min = vector[i]; // 
         vector[i] = vector[i + 1];
-        vector[i + 1] = mayor;
+        vector[i + 1] = min;
       }
     }
   }
