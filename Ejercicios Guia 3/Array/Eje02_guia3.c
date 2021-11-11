@@ -5,7 +5,7 @@
   Ejercicios de la guia 3 de ejercicios de programacion. 
   Array
   Descripción:Que rellene un array con los 100 primeros números enteros y los muestre en pantalla 
-  en orden ascendente. 
+  en orden Descendente. 
   Programa: Eje02_guia2
   Alumno: Adolfo Jesús Troncoso.
 */
