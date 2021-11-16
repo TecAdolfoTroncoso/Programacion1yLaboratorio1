@@ -112,7 +112,6 @@ int convertirminus2()
     }
     printf("La frase en minuscula es: %s\n", texto2);
 }
-
 int derechoyrevez1()
 {
     int i, len = 0;
