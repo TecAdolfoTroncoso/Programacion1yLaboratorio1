@@ -13,98 +13,43 @@
     Programa: Eje05_guia2
     Alumno: Adolfo Jesús Troncoso.
   */
+int cargar_cadenas();
+int longitud_cadenas();
+char texto[100];
+char texto2[100];
 #include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-#define MAX 100
-void menu();
-char pedirdatos();
-void minusculaomayus();
-void buscar();
-void longitud(int text1, int text2);
-void darlovuelta();
-
-char palabra1[100], palabra2[100];
 
 int main()
 {
-    menu();
+
+    cargar_cadenas(texto, texto2);
+    longitud_cadenas(texto, texto2);
+    
 }
 
-void longitud(int text1, int text2)
+int cargar_cadenas()
 {
-    int longitud1 = strlen(text1);
-    int longitud2 = strlen(text2);
-    printf("La longitud de la primera cadena de caracteres es: %d y la longitud de la segunda es: %d", longitud1, longitud2);
+    printf("Ingresa una frase: ");
+    gets(texto);
+    printf("Ingresa la siguiente frase: ");
+    gets(texto2);
 }
 
-char pedirdatos()
+int longitud_cadenas()
 {
-    printf("Ingresa la primer cadena de caracteres \n");
-    gets(palabra1);
-
-    printf("Ingresa la segunda cadena de caracteres \n");
-    gets(palabra2);
-    return palabra1, palabra2;
-}
-
-void pedirdatos()
-{
-    printf("La primer cadena%c \n", palabra1);
-
-    printf("La segunda cadena de caracteres \n", palabra2);
-}
-
-void menu()
-{
-    int opc;
-    do
+    int contador = 0, aux = 0;
+    // Recorrer la cadena hasta encontrar el carácter NUL o de terminación
+    while (texto[contador] != 0)
     {
-        system("cls");
-        printf("Menu de opciones \n \n");
-        printf("Ingrese los valores \n");
-        printf("1. Ingresa las dos cadenas de caracteres \n");
-        printf("2. Mostrar las cadenas del derecho al revez \n");
-        printf("3. Saber su longitud \n");
-        printf("4. Mostrar las dos cadenas juntas \n");
-        printf("5. ");
-        printf("5. Salir\n\n");
-        printf("Opcion a escoger: ");
-        scanf("%d", &opc);
-        switch (opc)
-        {
-        case 1:
-            pedirdatos();
+        contador++;
+    }
+    printf("La longitud de '%s' es %d\n", texto, contador);
+    while (texto2[aux] != 0)
+    {
+        aux++;
+    }
+    printf("La longitud de '%s' es %d\n", texto2, aux);
 
-            system("pause");
-            break;
-        case 2:
-           pedirdatos();
-
-            system("pause");
-            break;
-        case 3:
-            pedirdatos();
-            longitud(palabra1[MAX], palabra2[MAX]);
-            system("pause");
-            break;
-        case 4:
-            pedirdatos();
-
-            system("pause");
-            break;
-        case 5:
-            pedirdatos();
-            minusculaomayus();
-            system("pause");
-        default:
-            printf("Salio del programa\n");
-            system("pause");
-            break;
-        }
-        system("cls");
-    } while (opc <= 4);
+    return 0;
 }
-void minusculaomayus()
-{
-}
+

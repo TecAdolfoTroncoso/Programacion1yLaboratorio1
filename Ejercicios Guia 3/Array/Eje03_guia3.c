@@ -6,17 +6,17 @@
   Array
   Descripción:Que rellene un array con los números primos comprendidos entre 1 y 100 y los 
   muestre en pantalla en orden ascendente. 
-  Programa: Eje02_guia2
+  Programa: Eje03_guia2
   Alumno: Adolfo Jesús Troncoso.
 */
 #define MAX 100
 int vector[MAX];
 int main()
 {
- system("color 70");// 7 fondo blanco 0 Letras negras
- llenar_vector();
+  system("color 70"); // 7 fondo blanco 0 Letras negras
+  llenar_vector();
   //imprime_vector();
-  ordenarcaracteres();
+  filtroprimo();
 }
 void llenar_vector()
 {
@@ -36,12 +36,22 @@ void imprime_vector()
 
 void filtroprimo()
 {
- int cont =0;
+  int cont = 0;
 
-for (int j = 0; j < MAX; j++)
-{
-  /* code */
-}
+  for (int i = 2; i < vector[i]; i++)
+  {
+    for (int j = 0; j <= i/2 ; j++)
+    {
+      if (i % j == 0)
+      {
+        cont = cont + 1;
+        break;
+      }
+    }
 
-  
+    if (cont < 1)
+    {
+      scanf(" %d ",i);
+    }
+  }
 }
