@@ -20,15 +20,15 @@ int main()
 }
 void llenar_vector()
 {
-  for (int i = 0; i < MAX; i++)
+  for (int i = 0; i <= MAX; i++)
   {
-    vector[i] = rand() % 101;
+    vector[i] = rand() % 102;
   }
 }
 
 void imprime_vector()
 {
-  for (int i = 0; i < MAX; i++)
+  for (int i = 0; i <= MAX; i++)
   {
     printf("%d - %d \n", i + 1, vector[i]);
   }

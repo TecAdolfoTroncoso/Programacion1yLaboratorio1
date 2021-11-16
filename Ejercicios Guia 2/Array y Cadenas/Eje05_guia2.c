@@ -38,7 +38,7 @@ int cargar_cadenas()
 int longitud_cadenas()
 {
     int contador = 0, aux = 0;
-    // Recorrer la cadena hasta encontrar el carácter NUL o de terminación
+    // Recorrer la cadena hasta encontrar el carácter de terminación
     while (texto[contador] != 0)
     {
         contador++;
