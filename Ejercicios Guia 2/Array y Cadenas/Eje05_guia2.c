@@ -15,6 +15,10 @@
   */
 int cargar_cadenas();
 int longitud_cadenas();
+int convertirmayus1();
+int convertirminus1();
+int convertirmayus2();
+int convertirminus2();
 char texto[100];
 char texto2[100];
 #include <stdio.h>
@@ -24,7 +28,8 @@ int main()
 
     cargar_cadenas(texto, texto2);
     longitud_cadenas(texto, texto2);
-    
+    convertirmayus1(texto);
+    convertirminus1(texto);
 }
 
 int cargar_cadenas()
@@ -51,5 +56,58 @@ int longitud_cadenas()
     printf("La longitud de '%s' es %d\n", texto2, aux);
 
     return 0;
+}
+
+int convertirmayus1()
+{
+    int i = 0;
+    while (texto[i] != '\0')
+    {
+        if (texto[i] >= 'a' && texto[i] <= 'z')
+        {
+            texto[i] = texto[i] - ('a' - 'A');
+        }
+        i++;
+    }
+    printf("La frase en mayuscula es: %s\n",texto);
+}
+int convertirminus1()
+{
+    int i = 0;
+    while (texto[i] != '\0')
+    {
+        if (texto[i] >= 'A' && texto[i] <= 'Z')
+        {
+            texto[i] = texto[i] - ('A' - 'a');
+        }
+        i++;
+    }
+    printf("La frase en minuscula es: %s\n",texto);
+}
+int convertirmayus2()
+{
+    int i = 0;
+    while (texto2[i] != '\0')
+    {
+        if (texto2[i] >= 'a' && texto2[i] <= 'z')
+        {
+            texto2[i] = texto2[i] - ('a' - 'A');
+        }
+        i++;
+    }
+    printf("La frase en mayuscula es: %s\n",texto2);
+}
+int convertirminus2()
+{
+    int i = 0;
+    while (texto2[i] != '\0')
+    {
+        if (texto2[i] >= 'A' && texto2[i] <= 'Z')
+        {
+            texto2[i] = texto2[i] - ('A' - 'a');
+        }
+        i++;
+    }
+    printf("La frase en minuscula es: %s\n",texto2);
 }
 
