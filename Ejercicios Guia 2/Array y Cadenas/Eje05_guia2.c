@@ -114,10 +114,10 @@ int convertirminus2()
 
 int derechoyrevez()
 {
-int i,len=0;
-len=strlen(texto);
-for(i=len;i>=0;i--){
-    printf("%c", texto[i]);
+    int i, len = 0;
+    len = strlen(texto);
+    for (i = len; i >= 0; i--)
+    {
+        printf("%c", texto[i]);
+    }
 }
-}
-
