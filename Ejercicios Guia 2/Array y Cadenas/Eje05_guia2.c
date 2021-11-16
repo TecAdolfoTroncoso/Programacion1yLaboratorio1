@@ -19,7 +19,7 @@ int convertirmayus1();
 int convertirminus1();
 int convertirmayus2();
 int convertirminus2();
-int derechoyrevez();
+int derechoyrevez1();
 char texto[100];
 char texto2[100];
 #include <stdio.h>
@@ -30,7 +30,8 @@ int main()
     longitud_cadenas(texto, texto2);
     convertirmayus1(texto);
     convertirminus1(texto);
-    derechoyrevez(texto);
+    derechoyrevez1(texto);
+    derechoyrevez2(texto2);
 }
 
 int cargar_cadenas()
@@ -112,12 +113,21 @@ int convertirminus2()
     printf("La frase en minuscula es: %s\n", texto2);
 }
 
-int derechoyrevez()
+int derechoyrevez1()
 {
     int i, len = 0;
     len = strlen(texto);
     for (i = len; i >= 0; i--)
     {
-        printf("%c", texto[i]);
+        printf("%c\n", texto[i]);
+    }
+}
+int derechoyrevez2()
+{
+    int i, len = 0;
+    len = strlen(texto2);
+    for (i = len; i >= 0; i--)
+    {
+        printf("%c\n", texto2[i]);
     }
 }
