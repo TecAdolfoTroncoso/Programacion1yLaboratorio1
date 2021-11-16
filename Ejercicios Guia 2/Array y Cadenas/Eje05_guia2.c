@@ -172,5 +172,5 @@ void menu()
             break;
         }
         system("cls");
-    } while (opc <= 7);
+    } while (opc <= 6);
 }
