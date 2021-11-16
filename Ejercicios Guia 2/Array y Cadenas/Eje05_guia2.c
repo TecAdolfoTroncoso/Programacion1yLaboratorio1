@@ -20,25 +20,22 @@ int convertirminus1();
 int convertirmayus2();
 int convertirminus2();
 int derechoyrevez1();
+void menu();
 char texto[100];
 char texto2[100];
 #include <stdio.h>
 
 int main()
 {
-    cargar_cadenas(texto, texto2);
-    longitud_cadenas(texto, texto2);
-    convertirmayus1(texto);
-    convertirminus1(texto);
-    derechoyrevez1(texto);
-    derechoyrevez2(texto2);
+
+    menu();
 }
 
 int cargar_cadenas()
 {
-    printf("Ingresa una frase: ");
+    printf("Ingresa una frase: \n");
     gets(texto);
-    printf("Ingresa la siguiente frase: ");
+    printf("Ingresa la siguiente frase: \n");
     gets(texto2);
 }
 
@@ -129,4 +126,51 @@ int derechoyrevez2()
     {
         printf("%c\n", texto2[i]);
     }
+}
+
+void menu()
+{
+    int opc;
+    do
+    {
+        system("cls");
+        printf("Menu de opciones \n \n");
+        printf("Ingrese los valores \n");
+        printf("1. Ingresa por teclado 2 cadenas de caracteres \n");
+        printf("2. Imprimirlas cada cadena del derecho y al revés \n");
+        printf("3. Dar la longitud de las cadenas \n");
+        printf("4. Copiar las dos cadenas, una después de la otra. \n");
+        printf("5. Buscar una cadena dentro de la otra y avisar por pantalla la posición de la 2da cadena donde empiezan a ser iguales\n\n");
+        printf("6. Convertir la cadena todo a Minúsculas o Mayúsculas \n");
+        printf("7. Salir\n ");
+        printf("Opcion a escoger: ");
+        scanf("%d", &opc);
+        switch (opc)
+        {
+        case 1:
+            cargar_cadenas();
+            system("pause");
+            break;
+        case 2:
+            derechoyrevez1(texto);
+            derechoyrevez2(texto2);
+            system("pause");
+            break;
+        case 3:
+            longitud_cadenas(texto, texto2);
+            system("pause");
+            break;
+        case 4:
+            printf("%c,%c",texto,texto2);
+            system("pause");
+            break;
+        case 5:
+        case 6:
+        default:
+            printf("Salio del programa\n");
+            system("pause");
+            break;
+        }
+        system("cls");
+    } while (opc <= 7);
 }
