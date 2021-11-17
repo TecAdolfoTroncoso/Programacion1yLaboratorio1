@@ -111,21 +111,31 @@ int convertirminus2()
 }
 int derechoyrevez1()
 {
-    int i, len = 0;
-    len = strlen(texto);
-    for (i = len; i >= 0; i--)
-    {
-        printf("%c\n", texto[i]);
+     int i,j;
+  printf("\nLa cadena introducida es: %s\n\n", texto);
+    while(texto[i]!='\0'){
+        i++;
     }
+    printf("La cadena al rev\x82s es:\n\t");
+    for (j=i-1; j>=0; j--){
+        printf("%c", texto[j]);
+    }
+    puts("");
+    return 0;
 }
 int derechoyrevez2()
 {
-    int i, len = 0;
-    len = strlen(texto2);
-    for (i = len; i >= 0; i--)
-    {
-        printf("%c\n", texto2[i]);
+    int i,j;
+  printf("\nLa cadena introducida es: %s\n\n", texto2);
+    while(texto2[i]!='\0'){ // lee la cadena hasta el final
+        i++;
     }
+    printf("La cadena al rev\x82s es:\n\t");
+    for (j=i-1; j>=0; j--){  // averiguar que hace.
+        printf("%c", texto2[j]);// imprime la cadena invertida.
+    }
+    puts("");
+    return 0;
 }
 
 void menu()
@@ -137,7 +147,7 @@ void menu()
         printf("Menu de opciones \n \n");
         printf("Ingrese los valores \n");
         printf("1. Ingresa por teclado 2 cadenas de caracteres \n");
-        printf("2. Imprimirlas cada cadena del derecho y al revés \n");
+        printf("2. Imprimirlas cada cadena del derecho y al rev\x82s \n");
         printf("3. Dar la longitud de las cadenas \n");
         printf("4. Copiar las dos cadenas, una después de la otra. \n");
         printf("5. Buscar una cadena dentro de la otra y avisar por pantalla la posición de la 2da cadena donde empiezan a ser iguales\n\n");
@@ -145,6 +155,7 @@ void menu()
         printf("7. Salir\n ");
         printf("Opcion a escoger: ");
         scanf("%d", &opc);
+        fflush(stdin);
         switch (opc)
         {
         case 1:
