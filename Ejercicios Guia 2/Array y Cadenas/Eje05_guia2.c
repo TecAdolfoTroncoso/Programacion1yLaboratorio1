@@ -149,9 +149,9 @@ void menu()
         printf("1. Ingresa por teclado 2 cadenas de caracteres \n");
         printf("2. Imprimirlas cada cadena del derecho y al rev\x82s \n");
         printf("3. Dar la longitud de las cadenas \n");
-        printf("4. Copiar las dos cadenas, una después de la otra. \n");
+        printf("4. Copiar las dos cadenas, una despu\x82s de la otra. \n");
         printf("5. Buscar una cadena dentro de la otra y avisar por pantalla la posición de la 2da cadena donde empiezan a ser iguales\n\n");
-        printf("6. Convertir la cadena todo a Minúsculas o Mayúsculas \n");
+        printf("6. Convertir la cadena todo a Minusculas o Mayusculas \n");
         printf("7. Salir\n ");
         printf("Opcion a escoger: ");
         scanf("%d", &opc);
@@ -172,7 +172,7 @@ void menu()
             system("pause");
             break;
         case 4:
-            printf("%c,%c",texto,texto2);
+            printf("%s,%s",texto,texto2);
             system("pause");
             break;
         case 5:

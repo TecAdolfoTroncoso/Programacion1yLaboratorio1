@@ -6,7 +6,7 @@
   Array
   Descripción:Que rellene un array con los 100 primeros números enteros y los muestre en pantalla 
   en orden Ascendente. 
-  Programa: Eje01_guia2
+  Programa: Eje01_guia3
   Alumno: Adolfo Jesús Troncoso.
 */
 #define MAX 100
