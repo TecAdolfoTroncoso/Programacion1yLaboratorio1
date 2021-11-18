@@ -13,9 +13,8 @@
 int vector[MAX];
 int main()
 {
- system("color 70");// 7 fondo blanco 0 Letras negras
- llenar_vector();
-  //imprime_vector();
+  system("color 70"); // 7 fondo blanco 0 Letras negras
+  llenar_vector();
   ordenarcaracteres();
 }
 void llenar_vector()
@@ -26,33 +25,24 @@ void llenar_vector()
   }
 }
 
-void imprime_vector()
-{
-  for (int i = 0; i <= MAX; i++)
-  {
-    printf("%d - %d \n", i + 1, vector[i]);
-  }
-}
-
 void ordenarcaracteres()
 {
   printf("\n\nOrden Ascendente\n");
-  int a, i; // Contadores 
+  int a, i;                      // Contadores
   for (int a = 1; a <= MAX; a++) // recorre los 100 lugares del array
   {
     for (i = 1; i < MAX; i++) //recorre 99 lugares del array deja el lugar 100 del array como el ultimo como menor.
     {
-      if (vector[i] > vector[i + 1])// Compara el primer valor del array contra el siguiente del mismo.
+      if (vector[i] > vector[i + 1]) // Compara el primer valor del array contra el siguiente del mismo.
       {
-        int mayor = vector[i]; // 
+        int mayor = vector[i]; //
         vector[i] = vector[i + 1];
         vector[i + 1] = mayor;
       }
     }
   }
-  for ( i = 1; i < MAX; i++)
+  for (i = 1; i < MAX; i++)
   {
-    printf ("%d\t",vector[i]);
+    printf("%d\t", vector[i]);
   }
-  
 }
