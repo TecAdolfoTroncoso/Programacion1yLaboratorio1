@@ -9,59 +9,55 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 100
-int vector[MAX];
+void llenar_vector(int v[]);
+void imprimir_primos(int v[]);
 
 int main()
 {
-  int m;
+  system("cls");
+  int primos[MAX];
+  llenar_vector(primos);
+  imprimir_primos(primos);
   system("color 70"); // 7 fondo blanco 0 Letras negras
-  llenar_vector();
-  //imprime_vector();
-  ordenarcaracteres(llenar_vector);
 }
-void llenar_vector()
+
+void llenar_vector(int v[])
 {
-  for (int i = 0; i < MAX; i++)
+  int i, acumulador = 0, cont = 0;
+  for (i = 0; i <= MAX; i++) // limpio la variable
   {
-    vector[i] = rand() % 101;
+    v[i] = 0;
   }
-}
-
-void imprime_vector()
-{
-  for (int i = 0; i <= MAX; i++)
+  for (i = 1; i <= MAX; i++) //
   {
-    printf("%d - %d \n", i + 1, vector[i]);
-  }
-}
-
-void ordenarcaracteres(int m)
-{
-
-  int cont = 0, x = 0, i, j;
-  for (i = 1; m <= i; i++)
-  {
-    for (j = 1; i <= j; j++)
+    acumulador++;
+    for (int i = 1; i <= acumulador; i++)
     {
-      if (i % j == 0)
+      if (acumulador % i == 0)
       {
         cont++;
       }
     }
-    if (cont == 2 || j == 1 || j == 0)
+    if (cont == 2)
     {
-      vector[i] = j;
-      x++;
+      v[i] = acumulador;
     }
     else
     {
       cont = 0;
     }
   }
-
-  for (j = 0; j < x; i++)
-  {
-    printf("%d\n", vector[i]);
-  }
 }
 
+void imprimir_primos(int v[])
+{
+  printf("Los primos se mostraran de forma ascendente\n");
+  for (int i = 0; i < MAX; i++)
+  {
+    if (v[i] != 0)
+    {
+
+      printf("%d  -\t ", v[i]);
+    }
+  }
+}
