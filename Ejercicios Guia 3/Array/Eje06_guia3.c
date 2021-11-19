@@ -6,3 +6,17 @@
   Programa: Eje04_guia3
   Alumno: Adolfo Jesús Troncoso.
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+
+void cargar_e_imprimir(int impar[]);
+
+int main(){
+  system("cls");
+  system ("color 70");
+  int impares[MAX];
+  cargar_e_imprimir(impares);
+
+}
