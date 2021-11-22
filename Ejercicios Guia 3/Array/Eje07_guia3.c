@@ -3,7 +3,7 @@
   Array
   Descripción:Que lea 10 números por teclado, los almacene en un array y los ordene de forma 
   ascendente. 
-  Programa: Eje04_guia3
+  Programa: Eje07_guia3
   Alumno: Adolfo Jesús Troncoso.
 */
 
