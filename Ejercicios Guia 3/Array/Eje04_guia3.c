@@ -25,8 +25,8 @@ int main(){
 
 void cargar_e_imprimir (int par[]){
   int i,cont=0;
-  for(int limpio=0;i<=100;i++){
-    par[i]=0;
+ for(int lim=0;lim<=100;lim++){ //limpio el array para evitar suciedad dentro.
+    par[lim]=0;
   }
   for(i=1;i<=100;i++){//numeros comprendidos de 1 a 100
   if (i%2==0){// si el modulador de i es de resto 0 es par

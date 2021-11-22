@@ -22,8 +22,8 @@ int main(){
 
 void cargar_e_imprimir (int impar[]){
   int i,cont=0,lim;
-  for(lim=0;i<=100;i++){ //limpio el array para evitar suciedad dentro.
-    impar[i]=0;
+  for(lim=0;lim<=100;lim++){ //limpio el array para evitar suciedad dentro.
+    impar[lim]=0;
   }
   for(i=1;i<=100;i++){//numeros comprendidos de 1 a 100
   if (i%2==1){// si el modulador de i es de resto 1 es impar

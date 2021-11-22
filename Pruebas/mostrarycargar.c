@@ -1,25 +1,16 @@
-/*
-  Ejercicios de la guia 3 de ejercicios de programacion. 
-  Array
-  Descripción:Que lea 10 números por teclado, los almacene en un array y los ordene de forma 
-  ascendente. 
-  Programa: Eje04_guia3
-  Alumno: Adolfo Jesús Troncoso.
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 10
 
 int cargar(int numero[]);
-int ordenar(int numero[]);
+int mostrar(int numero[]);
 
 int main(){
   system("cls");
   system ("color 70");
   int numeros[MAX];
   cargar(numeros);
-  ordenar(numeros);
+  mostrar(numeros);
 
 }
 
@@ -37,7 +28,7 @@ int cargar(int numero[]){
   
 }
 
-int ordenar (int numero[]){
+int mostrar (int numero[]){
   int i;
   for(i=0;i<10;i++){ 
 
