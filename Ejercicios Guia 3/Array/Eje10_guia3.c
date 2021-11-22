@@ -23,7 +23,7 @@ int main()
     cargar(numeros);
     printf("Array Ingresado\n");
     mostrar(numeros);
-    printf("\nArray Multiplicado\n");
+    printf("\nArray Multiplicado \n");
     multiplicar(numeros, numeros2);
     mostrar(numeros2);
     printf("\nArray Ordenado\n");
