@@ -29,9 +29,9 @@ void ordenarcaracteres()
 {
   printf("\n\nOrden Ascendente\n");
   int a, i;                      // Contadores
-  for (int a = 1; a <= MAX; a++) // recorre los 100 lugares del array
+  for (int a = 0; a <= MAX; a++) // recorre los 100 lugares del array
   {
-    for (i = 1; i < MAX; i++) //recorre 99 lugares del array deja el lugar 100 del array como el ultimo como menor.
+    for (i = 0; i < MAX-1; i++) //recorre 99 lugares del array deja el lugar 100 del array como el ultimo como menor.
     {
       if (vector[i] > vector[i + 1]) // Compara el primer valor del array contra el siguiente del mismo.
       {
@@ -41,7 +41,7 @@ void ordenarcaracteres()
       }
     }
   }
-  for (i = 1; i < MAX; i++)
+  for (i = 0; i < MAX; i++)
   {
     printf("%d\t", vector[i]);
   }
