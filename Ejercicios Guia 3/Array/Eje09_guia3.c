@@ -10,9 +10,9 @@
 #include <stdlib.h>
 #define MAX 5
 
-int cargar(int numero[]);
-int multiplicar(int numero2[], int numero[]);
-int mostrar(int numero2[]);
+int cargar(int array1[]);
+int multiplicar(int array1[], int array2[]);
+int mostrar(int muestra[]);
 int main()
 {
     system("cls");
