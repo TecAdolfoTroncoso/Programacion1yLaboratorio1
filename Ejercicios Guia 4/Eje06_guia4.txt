@@ -1,0 +1,4 @@
+Typedef es una palabra reservada en el lenguaje de programación C. Su función es asignar 
+un nombre alternativo a tipos existentes, a menudo cuando su declaración normal es 
+aparatosa, potencialmente confusa o probablemente variable de una implementación a 
+otra.

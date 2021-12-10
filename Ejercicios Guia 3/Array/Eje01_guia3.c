@@ -11,12 +11,14 @@
 */
 #define MAX 100
 int vector[MAX];
+
 int main()
 {
   system("color 70"); // 7 fondo blanco 0 Letras negras
   llenar_vector();
   ordenarcaracteres();
 }
+
 void llenar_vector()
 {
   for (int i = 0; i <= MAX; i++)

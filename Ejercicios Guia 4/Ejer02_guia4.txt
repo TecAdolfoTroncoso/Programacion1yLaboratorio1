@@ -1,0 +1,2 @@
+Declare una tipo de datos para representar las estaciones del año.
+

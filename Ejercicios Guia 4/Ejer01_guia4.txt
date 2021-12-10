@@ -1,0 +1,25 @@
+/*
+  Ejercicios de la guia 4 de ejercicios de programacion. 
+  Estructuras.
+  Encuentre los errores en la siguiente declaración de estructura y posterior definición de 
+  variable. 
+  Programa: Eje01_guia4
+  Alumno: Adolfo Jesús Troncoso.
+*/
+
+struct hormiga
+{
+int patas;
+char especie[41];
+float tiempo;
+};
+hormiga colonia[100];
+
+La siguiente declaracion de la estructura tiene el siguiente error:
+hormiga colonia [100];
+
+La declaracion correcta de la estructura deberia ser la siguiente:
+struct hormiga colonia[100];
+La cual deberia declararse dentro del main.
+
+
