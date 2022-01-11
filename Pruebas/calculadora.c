@@ -31,5 +31,5 @@ int num=0,numero2=0;
    scanf("%d",&num);
    printf("Ingrese numero 2");
    scanf("%d",&numero2);
-    printf ("Resultado de suma",suma(num,numero2);
+    printf ("Resultado de suma",suma(num,numero2));
 }
